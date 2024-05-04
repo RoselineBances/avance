@@ -1,14 +1,16 @@
 package com.example.proyect.services;
 
+import com.example.proyect.entities.Actividad;
 import com.example.proyect.entities.Cliente;
 
 import java.util.List;
 
-public interface ClienteService {
-    public List<Cliente> listAll();
-    public List<Cliente> listByNome(String nome);
+public interface ClienteService { List<Cliente> listAll();
+   List<Cliente> listByNome(String nome);
 
-    public Cliente findById(long id);
+   Cliente findById(long id);
 
+   Cliente save(Cliente cliente);
+   void delete(Long id);
 
 }

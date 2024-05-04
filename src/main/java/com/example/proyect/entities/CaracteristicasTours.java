@@ -1,24 +1,24 @@
 package com.example.proyect.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "caracteristicas_tours")
 
-@Table(name="usuarios")
-
-public class Usuario {
-
+public class CaracteristicasTours {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
+    @ManyToOne
+    @JoinColumn(name = "tours_id")
+    private Tours tours;
+    @ManyToOne
+    @JoinColumn(name = "actividad_Fa_id")
+    private Actividad actividadesFa;
 }
-

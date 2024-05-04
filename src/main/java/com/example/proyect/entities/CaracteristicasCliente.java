@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="caracteristicas_clientes")
+@Table(name="CaracteristicasClientes")
 
 public class CaracteristicasCliente {
     @Id
@@ -20,7 +20,7 @@ public class CaracteristicasCliente {
     private int clienteId;
 
     @Column(name = "actividades_Actividad_Fav")
-    private int actividadesActividadFav;
+    private int actividadesFav;
 
     @Column(name = "Asientos Disponibles")
     private int asientosDisponibles;

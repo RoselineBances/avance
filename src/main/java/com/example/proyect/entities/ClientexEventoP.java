@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-@Table(name="clientesxeventosp")
+@Table(name="ClientesxEventops")
 
 public class ClientexEventoP {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column(name = "cliente_id")
     private int cliente_id;
@@ -35,7 +35,5 @@ public class ClientexEventoP {
 
     @ManyToOne
     @JoinColumn(name = "evento_programado", insertable = false, updatable = false)
-    private EventoProgramado eventoProgramado;
-
-
+    private EventoProgramado EventoProgramado;
 }
