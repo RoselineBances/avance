@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/clientes")
 public class ClienteController {
     @Autowired
-    private ClienteService clienteService;
+    ClienteService clienteService;
 
     @PostMapping
     public ResponseEntity<Void>registrarCliente(@RequestBody Cliente cliente) {
         clienteService.registrarCliente(cliente);
-        return ResponseEntity.ok().build()
+        return ResponseEntity.ok().build();
     }
 }
